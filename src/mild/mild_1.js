@@ -40,9 +40,9 @@ export function getIncreasingArray(startNumber, endNumber) {
  * and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
  */
 export function maxAndMin(numbers) {
-    var mini = Math.min(numbers)
-    var maxi = Math.max(numbers)
-    var dictionary = {min: mini, max: maxi}
+    var mini = Math.min(...numbers)
+    var maxi = Math.max(...numbers)
+    var dictionary = {max: maxi, min: mini}
     return dictionary
 }
 
@@ -59,10 +59,10 @@ export function maxAndMin(numbers) {
 export function countArray(array) {
     var uniqueVals = [... new Set(array)];
     var dictionary = {};
-    for (var i = 0; i < uniqueVals.length(); i++) {
+    for (var i = 0; i < uniqueVals.length; i++) {
         var key = uniqueVals[i]
         var count = 0
-        for (var j = 0; j < array.length(); j++) {
+        for (var j = 0; j < array.length; j++) {
             if (key == array[i]) {
                 count += 1
             }
