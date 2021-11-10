@@ -55,6 +55,30 @@ export function getMedian(array) {
  }
  */
 export function getStatistics(array) {
+    var theSum = getSum(array)
+    var theMedian = getMedian(array)
+    var theMean = theSum / array.length
+    var mini = Math.min(array)
+    var maxi = Math.max(array)
+    var theLength = array.length
+    // calculate variance
+    var theVariance = 0
+    array.forEach(num => {
+        theVariance = theVariance + ((num - theMean) ** 2)
+    })
+    theVariance /= array.length
+    var theStdev = Math.sqrt(theVariance)
 
+    var dictionary = {
+        length: theLength,
+        sum: theSum,
+        mean: theMean,
+        median: theMedian,
+        min: mini,
+        max: maxi,
+        variance: theVariance,
+        standard_deviation: theStdev
+    }
+    return dictionary
 }
 
