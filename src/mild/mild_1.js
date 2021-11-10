@@ -63,7 +63,7 @@ export function countArray(array) {
         var key = uniqueVals[i]
         var count = 0
         for (var j = 0; j < array.length; j++) {
-            if (key == array[i]) {
+            if (key == array[j]) {
                 count += 1
             }
         }
