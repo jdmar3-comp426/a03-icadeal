@@ -104,7 +104,8 @@ export function removeKeyNonDestructive(object, key) {
  */
 export function removeKeys(object, keyList) {
    for (var i = 0; i < keyList.length; i++) {
-      delete object[keyList[i]]
+      var key = keyList[i]
+      delete object[key]
    }
    return object
 }
