@@ -58,8 +58,8 @@ export function getStatistics(array) {
     var theSum = getSum(array)
     var theMedian = getMedian(array)
     var theMean = theSum / array.length
-    var mini = Math.min(array)
-    var maxi = Math.max(array)
+    var mini = Math.min(...array)
+    var maxi = Math.max(...array)
     var theLength = array.length
     // calculate variance
     var theVariance = 0
