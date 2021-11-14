@@ -20,12 +20,12 @@ see under the methods section
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
 
- function avgMpg() {
+ export function avgMpg() {
     var sumCity = 0
     var sumHighway = 0
     for (var i = 0; i < mpg_data.length; i++) {
-        sumCity += mpg_data[i[city]]
-        sumHighway += mpg_data[i[highway]]
+        sumCity += mpg_data[i["city"]]
+        sumHighway += mpg_data[i["highway"]]
     }
     var averageCity = sumCity / mpg_data.length
     var averageHighway = sumHighway / mpg_data.length
@@ -33,19 +33,19 @@ see under the methods section
     return dictionary
 }
 
-function allYearStats() {
+export function allYearStats() {
     var yearsArray = []
     for (var i = 0; i < mpg_data.length; i++) {
-        yearsArray.push(mpg_data[i[year]])
+        yearsArray.push(mpg_data[i["year"]])
     }
     return getStatistics(yearsArray)
 }
 
-function ratioHybrids() {
+export function ratioHybrids() {
     var hybrids = 0
     var total = 0
     for (var i =0; i <mpg_data.length; i++) {
-        if (mpg_data[i[hybrid]] == true) {
+        if (mpg_data[i["hybrid"]] == true) {
             hybrids += 1
         } 
         total += 1
