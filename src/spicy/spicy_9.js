@@ -96,7 +96,14 @@ export const tenTimesFifty = () => {
  *    everyEven([1, 1, 0, 1, 1], x => x === 1)  <--  returns false
  */
 export const everyEven = (arr, test) => {
-
+    for (var i = 0; i < arr.length; i++) {
+        if (i % 2 == 0) {
+            if (test(arr[i]) == false) {
+                return false
+            }
+        }
+    }
+    return true
 };
 
 
@@ -120,7 +127,14 @@ export const everyEven = (arr, test) => {
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-
+    for (var i = 0; i < arr.length; i++) {
+        if (i % 2 == 0) {
+            if (test(arr[i]) == true) {
+                return true
+            }
+        }
+    }
+    return false
 };
 
 
@@ -146,7 +160,17 @@ export const someEven = (arr, test) => {
  *       -->  { pass: [1, 5, 31], fail: [90] }
  */
 export const filter = (arr, test) => {
-
+    var passed = []
+    var failed = []
+    for (var i = 0; i < arr.length; i++) {
+        if (test(arr[i] == true)) {
+            passed.push(arr[i])
+        } else {
+            failed.push(arr[i])
+        }
+    }
+    var dictionary = {pass: passed, fail: failed}
+    return dictionary
 };
 
 
@@ -156,7 +180,7 @@ export const filter = (arr, test) => {
  *   odd numbers. Use the "everyEven" function in this function.
  */
 export const allEvensAreOdd = (arr) => {
-
+    return everyEven(arr, x => x % 2 === 1)
 };
 
 
@@ -166,7 +190,7 @@ export const allEvensAreOdd = (arr) => {
  *   array is an odd number. Use the "someEven" function in this function.
  */
 export const anEvenIsOdd = (arr) => {
-
+    return someEven(arr, x => x % 2 === 1)
 };
 
 
