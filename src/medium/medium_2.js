@@ -27,8 +27,8 @@ see under the methods section
         sumCity += mpg_data[i['city']]
         sumHighway += mpg_data[i['highway']]
     }
-    averageCity = sumCity / mpg_data.length
-    averageHighway = sumHighway / mpg_data.length
+    var averageCity = sumCity / mpg_data.length
+    var averageHighway = sumHighway / mpg_data.length
     var dictionary = {city: averageCity, highway: averageHighway}
     return dictionary
 }
