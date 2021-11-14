@@ -163,7 +163,7 @@ export const filter = (arr, test) => {
     var passed = []
     var failed = []
     for (var i = 0; i < arr.length; i++) {
-        if (test(arr[i] == true)) {
+        if (test(arr[i]) == true) {
             passed.push(arr[i])
         } else {
             failed.push(arr[i])
