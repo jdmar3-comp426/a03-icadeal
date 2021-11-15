@@ -23,8 +23,8 @@ export function avgMpg() {
     var sumCity = 0
     var sumHighway = 0
     for (var i = 0; i < mpg_data.length; i++) {
-        sumCity += mpg_data[i]["city"]
-        sumHighway += mpg_data[i]["highway"]
+        sumCity += mpg_data[i]["city_mpg"]
+        sumHighway += mpg_data[i]["highway_mpg"]
     }
     var averageCity = sumCity / mpg_data.length
     var averageHighway = sumHighway / mpg_data.length
