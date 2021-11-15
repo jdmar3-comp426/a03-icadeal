@@ -63,7 +63,7 @@ export function searchName(car_data, searchTerm) {
     var returnArr = []
     for (var i = 0; i < car_data.length; i++) {
         if (car_data[i]["id"].toLowerCase().includes(searchTerm.toLowerCase())) {
-            returnArr.push(car_data)
+            returnArr.push(car_data[i])
         }
     }
     returnArr.sort((a, b) => b["id"].indexOf(searchTerm) - a["id"].indexOf(searchTerm))
