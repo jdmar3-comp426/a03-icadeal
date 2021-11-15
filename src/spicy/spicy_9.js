@@ -201,5 +201,10 @@ export const anEvenIsOdd = (arr) => {
  *   pass the test. You must use the filter function.
  */
 export const hasExactly = (arr, test, n) => {
-
+    var dictionary = filter(arr, test)
+    if (dictionary['passed'].length == n) {
+        return true
+    } else {
+        return false
+    }
 };
