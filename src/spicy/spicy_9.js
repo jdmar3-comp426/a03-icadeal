@@ -202,7 +202,7 @@ export const anEvenIsOdd = (arr) => {
  */
 export const hasExactly = (arr, test, n) => {
     var dictionary = filter(arr, test)
-    if (dictionary['passed'].length == n) {
+    if (dictionary['pass'].length == n) {
         return true
     } else {
         return false
