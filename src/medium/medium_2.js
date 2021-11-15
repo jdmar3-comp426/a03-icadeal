@@ -116,7 +116,18 @@ export const allCarStats = {
  *
  * }
  */
+
+export function makerHybrids() {
+    var returnArray = []
+    return returnArray
+}
+
+export function avgMpgByYearAndHybrid() {
+    var returnDict = {}
+    
+}
+
 export const moreStats = {
-    makerHybrids: undefined,
-    avgMpgByYearAndHybrid: undefined
+    makerHybrids: makerHybrids(),
+    avgMpgByYearAndHybrid: avgMpgByYearAndHybrid()
 };
