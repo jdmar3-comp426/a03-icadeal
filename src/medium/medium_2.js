@@ -19,10 +19,43 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+export function avgMpg() {
+    var sumCity = 0
+    var sumHighway = 0
+    for (var i = 0; i < mpg_data.length; i++) {
+        sumCity += mpg_data[i]["city_mpg"]
+        sumHighway += mpg_data[i]["highway_mpg"]
+    }
+    var averageCity = sumCity / mpg_data.length
+    var averageHighway = sumHighway / mpg_data.length
+    var dictionary = {city: averageCity, highway: averageHighway}
+    return dictionary
+}
+
+export function allYearStats() {
+    var yearsArray = []
+    for (var i = 0; i < mpg_data.length; i++) {
+        yearsArray.push(mpg_data[i]["year"])
+    }
+    return getStatistics(yearsArray)
+}
+
+export function ratioHybrids() {
+    var hybrids = 0
+    var total = 0
+    for (var i =0; i <mpg_data.length; i++) {
+        if (mpg_data[i]["hybrid"] == true) {
+            hybrids += 1
+        } 
+        total += 1
+    }
+    return hybrids / total 
+}
+
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: avgMpg(),
+    allYearStats: allYearStats(),
+    ratioHybrids: ratioHybrids(),
 };
 
 
@@ -83,7 +116,18 @@ export const allCarStats = {
  *
  * }
  */
+
+export function makerHybrids() {
+    var returnArray = []
+    return returnArray
+}
+
+export function avgMpgByYearAndHybrid() {
+    var returnDict = {}
+    
+}
+
 export const moreStats = {
-    makerHybrids: undefined,
-    avgMpgByYearAndHybrid: undefined
+    makerHybrids: makerHybrids(),
+    avgMpgByYearAndHybrid: avgMpgByYearAndHybrid()
 };
